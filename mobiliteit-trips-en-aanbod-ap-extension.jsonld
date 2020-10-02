@@ -1,9 +1,9 @@
 {
   "@context": {
     "Dock": "https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Dock",
-    "Dock.Aanbieder": {
+    "Dock.aanbieder": {
       "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Aanbieder",
+      "@id": "https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Dock.aanbieder",
       "@type": "@id"
     },
     "Dock.location": {
