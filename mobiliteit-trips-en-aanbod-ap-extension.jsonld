@@ -1,0 +1,32 @@
+{
+  "@context": {
+    "Dock": "https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Dock",
+    "Dock.Aanbieder": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Aanbieder",
+      "@type": "@id"
+    },
+    "Dock.location": {
+      "@id": "http://www.w3.org/ns/locn#geometry",
+      "@type" : "@id"
+    },
+    "Dock.capacity": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Capacity",
+      "@type": "@id"
+    },
+    "Capacity": "https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Capacity",
+    "Capacity.vervoermiddel":{
+      "@id": "https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Mobiliteitsdienst.vervoermiddel",
+      "@type": "@id"
+    },
+    "Capacity.max": {
+      "@id": "https://schema.org/Number",
+      "@type": "@id"
+    },
+    "Capacity.available": {
+      "@id": "https://schema.org/Number",
+      "@type": "@id"
+    }
+  }
+}
