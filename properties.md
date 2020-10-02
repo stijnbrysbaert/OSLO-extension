@@ -1,7 +1,7 @@
 | |  |
 | :-----: | ------ |
 | **Type**	| **Eigenschap** |
-| **URI** | https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Capacity |
+| **URI** |  |
 | **Domein** |  |
 | **Bereik**	|  |
 | **Definitie**	|  |
