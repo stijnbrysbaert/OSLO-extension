@@ -7,7 +7,8 @@
 @prefix dc:    <http://purl.org/dc/terms/> .
 @prefix prov:  <http://www.w3.org/ns/prov#> .
 @prefix schema: <http://schema.org/> .
-@prefix addr:  <https://data.vlaanderen.be/ns/adres#>
+@prefix addr:  <https://data.vlaanderen.be/ns/adres#> .
+@prefix locn:  <https://www.w3.org/ns/locn#> .
 
 :parking_facility_1   a  mv:ParkingFacility, 
                          tn:Transportobject, 
@@ -15,7 +16,7 @@
                          oslo:Overstap;
                     mv:arrangement :arrangment ;
                     mv:feature :feature ;
-                    schema:address <https://data.vlaanderen.be/doc/adres/3706808> ;
+                    locn:address <https://data.vlaanderen.be/doc/adres/3706808> ;
                     mv:entrance :entrance ;
                     mv:exit :exit ;
                     mv:validForVehicle mv:Bicycle ;
@@ -51,10 +52,10 @@
 :availablity   a oslo:Beschikbaarheid .
 
 :entrance a mv:ParkingFacilityEntrance ;
-          schema:address <https://data.vlaanderen.be/doc/adres/3706808> .
+          locn:address <https://data.vlaanderen.be/doc/adres/3706808> .
 
 :exit     a mv:ParkingFacilityExit ;
-          schema:address <https://data.vlaanderen.be/doc/adres/3706808> .
+          locn:address <https://data.vlaanderen.be/doc/adres/3706808> .
 
 :feature  a mv:VideoSurveillance .
 
