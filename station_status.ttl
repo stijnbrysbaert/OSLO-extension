@@ -1,0 +1,66 @@
+@prefix : <https://example/parkingfacility/gent/p01/> .
+@prefix oslo: <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#> .
+@prefix mv: <http://schema.mobivoc.org/#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix tn: <https://data.vlaanderen.be/ns/transportnetwerk#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+:parking_facility_1   a  mv:ParkingFacility, 
+                         tn:Transportobject, 
+                         oslo:Transportconnectie, 
+                         oslo:Overstap;
+                    mv:arrangement :arrangment ;
+                    mv:feature :feature ;
+                    mv:entrance :entrance ;
+                    mv:exit :exit ;
+                    mv:validForVehicle mv:Bicycle ;
+                    mv:capacity :capacity ;
+                    oslo:Transportobject.beschikbaarheid :availablity ;
+                    oslo:hasStatus :status .
+
+:status   a oslo:ParkingStatus ;
+          oslo:isRenting true ;
+          oslo:isReturning true ;
+          prov:generatedAtTime "2020-10-06T11:25:00Z" .
+
+:capacity a mv:Capacity ;
+          mv:totalCapacity 20 ;
+          mv:currentValue 10 ;
+          oslo:spacesFree 9 ;
+          oslo:vehiclesAvailable 10 ;
+          oslo:vehiclesReserved 0 ;
+          oslo:vehiclesDisabled 0 ;
+          oslo:spacesDisabled 1 ;
+          prov:generatedAtTime "2020-10-06T11:25:00Z" .
+
+:bike_01  a oslo:Resource ;
+          oslo:vervoermiddel mv:Bicycle ;
+          oslo:location :parking_facility_1 ;
+          oslo:Resource.status :vehicle_status_01 .
+
+:vehicle_status_01  a oslo:VehicleStatus ;
+                    oslo:isReserved false ;
+                    oslo:isDisabled false ;
+                    prov:generatedAtTime "2020-10-06T11:25:00Z" .
+
+:availablity   a oslo:Beschikbaarheid .
+
+:entrance
+    a mv:ParkingFacilityEntrance ;
+    rdfs:label "Koningin Maria Hendrikaplein"^^xsd:string ;
+    schema:address ex:entranceAdress ;
+    .
+
+:entranceAdress
+    a schema:PostalAddress ;
+    schema:streetAddress "Koningin Maria Hendrikaplein"^^xsd:string ;
+    schema:addressLocality "Gent" ;
+    schema:country <http://dbpedia.org/resource/Belgium> .
+
+:exit     a mv:ParkingFacilityExit .
+
+:feature  a mv:VideoSurveillance .
+
+:arrangment    a mv:ArrangmentPattern .
