@@ -9,6 +9,7 @@
 @prefix schema: <http://schema.org/> .
 @prefix adr:  <https://data.vlaanderen.be/ns/adres#> .
 @prefix locn:  <https://www.w3.org/ns/locn#> .
+@prefix ext:   <https://stijnbrysbaert.github.io/OSLO-extension/vocabulary.ttl#> .
 
 :parking_facility_1   a  mv:ParkingFacility, 
                          tn:Transportobject, 
@@ -17,7 +18,7 @@
                          adr:AdresseerbaarObject ;
                     mv:arrangement :arrangment ;
                     mv:feature :feature ;
-                    adr:adres :adres ;
+                    ext:adres <https://data.vlaanderen.be/doc/adres/3706808> ;
                     mv:entrance :entrance ;
                     mv:exit :exit ;
                     mv:validForVehicle mv:Bicycle ;
@@ -26,7 +27,7 @@
                     oslo:hasStatus :status .
 
 :adres    a adr:Adres ;
-          adr:verwijstNaar <https://data.vlaanderen.be/doc/adres/3706808> ;
+          adr:verwijstNaar  ;
           adr:isToegekendAan :parking_facility_1 .
 
 :status   a oslo:ParkingStatus ;
@@ -57,9 +58,11 @@
 :availablity   a oslo:Beschikbaarheid .
 
 :entrance a mv:ParkingFacilityExit, adr:AdresseerbaarObject ;
+          ext:adres <https://data.vlaanderen.be/doc/adres/3706808> ;
           adr:isToegekendAan :parking_facility_1 .
 
 :exit     a mv:ParkingFacilityExit, adr:AdresseerbaarObject ;
+          ext:adres <https://data.vlaanderen.be/doc/adres/3706808> ;
           adr:isToegekendAan :parking_facility_1 .
 
 :feature  a mv:VideoSurveillance .
