@@ -1,0 +1,11 @@
+@prefix :       <https://stijnbrysbaert.github.io/OSLO-extension/vocabulary.ttl#> .
+@prefix adr:    <https://data.vlaanderen.be/ns/adres#> .
+@prefix rdf:    <https://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+
+:adres  a rdf:Property ;
+        rdfs:seeAlso schema:address ;
+        rdfs:domain adr:AdresseebaarObject ;
+        rdfs:range adr:Adres ;
+        rdfs:isDefinedBy <https://stijnbrysbaert.github.io/OSLO-extension/vocabulary.ttl#> .
