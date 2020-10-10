@@ -4,11 +4,9 @@
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix tn:    <https://data.vlaanderen.be/ns/transportnetwerk#> .
-@prefix dc:    <http://purl.org/dc/terms/> .
 @prefix prov:  <http://www.w3.org/ns/prov#> .
 @prefix schema: <http://schema.org/> .
 @prefix adr:  <https://data.vlaanderen.be/ns/adres#> .
-@prefix locn:  <https://www.w3.org/ns/locn#> .
 @prefix ext:   <https://stijnbrysbaert.github.io/OSLO-extension/vocabulary.ttl#> .
 
 :parking_facility_1   a  mv:ParkingFacility, 
@@ -25,10 +23,6 @@
                     mv:capacity :capacity ;
                     oslo:Transportobject.beschikbaarheid :availablity ;
                     oslo:hasStatus :status .
-
-:adres    a adr:Adres ;
-          adr:verwijstNaar  ;
-          adr:isToegekendAan :parking_facility_1 .
 
 :status   a oslo:ParkingStatus ;
           oslo:isRenting true ;
