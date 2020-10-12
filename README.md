@@ -2,8 +2,8 @@
 
 This repository is an extension to the [OSLO Mobiliteit: Trips en Aanbod ](https://data.vlaanderen.be/doc/applicatieprofiel/mobiliteit-trips-en-aanbod).
 
-In [mobiliteit-trips-en-aanbod-ap-extension.jsonld](https://github.ugent.be/sbrysbae/OSLO-extension/blob/master/mobiliteit-trips-en-aanbod-ap-extension.jsonld) the JSON-LD context to extend [the existing context](https://data.vlaanderen.be/doc/applicatieprofiel/mobiliteit-trips-en-aanbod/erkendestandaard/2020-04-23/context/mobiliteit-trips-en-aanbod-ap.jsonld) is described.
+in [vocabulary.ttl](https://github.com/stijnbrysbaert/OSLO-extension/blob/master/vocabulary.ttl) new terms to extend the existing [OSLO Mobiliteit: Trips en Aanbod ](https://data.vlaanderen.be/doc/applicatieprofiel/mobiliteit-trips-en-aanbod) are defined. In [station_status.ttl](https://github.com/stijnbrysbaert/OSLO-extension/blob/master/station_status.ttl) example data can be found.
 
-In [classes.md](https://github.ugent.be/sbrysbae/OSLO-extension/blob/master/classes.md) the new classes used in the JSON-LD file are described.
+In [classes.md](https://github.ugent.be/sbrysbae/OSLO-extension/blob/master/classes.md) new classes are described.
 
-In [properties.md](https://github.ugent.be/sbrysbae/OSLO-extension/blob/master/properties.md) the properties used in the JSON-LD file are described.
+In [properties.md](https://github.ugent.be/sbrysbae/OSLO-extension/blob/master/properties.md) new properties are described.
