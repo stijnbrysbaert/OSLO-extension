@@ -1,11 +1,82 @@
 @prefix :       <https://stijnbrysbaert.github.io/OSLO-extension/vocabulary.ttl#> .
 @prefix adr:    <https://data.vlaanderen.be/ns/adres#> .
+@prefix dct:    <http://purl.org/dc/terms/> .
+@prefix mob:    <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#> .
+@prefix mv:     <http://schema.mobivoc.org/#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix trans:  <https://data.vlaanderen.be/ns/transportnetwerk#> .
 @prefix rdf:    <https://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <http://schema.org/> .
+@prefix vs:     <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix xsd:    <https://www.w3.org/2001/XMLSchema#> .
 
 :adres  a rdf:Property ;
         rdfs:seeAlso schema:address ;
         rdfs:domain adr:AdresseebaarObject ;
         rdfs:range adr:Adres ;
         rdfs:isDefinedBy <https://stijnbrysbaert.github.io/OSLO-extension/vocabulary.ttl#> .
+
+:geplaatst a rdf:Property ;
+           rdfs:domain mob:Beschikbaarheid ;
+           rdfs:range xsd:boolean ;
+           rdfs:commment "Is het object momenteel geplaatst op de straat?"@be-nl ;
+           rdfs:label "geplaatst"@be-nl ;
+           dct:created "2020-10-12"^^xsd:date ;
+           dct:modified "2020-10-12"^^xsd:date ;
+           vs:term_status "unstable"@en . 
+
+:actief    a rdf:Property ;
+           rdfs:domain mob:Beschikbaarheid ;
+           rdfs:range xsd:boolean ;
+           rdfs:commment "Verhuurd het object momenteel voertuigen?"@be-nl ;
+           rdfs:label "actief"@be-nl ;
+           dct:created "2020-10-12"^^xsd:date ;
+           dct:modified "2020-10-12"^^xsd:date ;
+           vs:term_status "unstable"@en .
+
+:ontvangt  a rdf:Property ;
+           rdfs:domain mob:Beschikbaarheid ;
+           rdfs:range xsd:boolean ;
+           rdfs:commment "Laat het station het terugbrengen van voertuigen toe?"@be-nl ;
+           rdsf:label "ontvangt"@be-nl ;
+           dct:created "2020-10-12"^^xsd:date ;
+           dct:modified "2020-10-12"^^xsd:date ;
+           vs:term_status "unstable"@en .
+
+:voertuigenBeschikbaar  a rdf:Property ;
+                        rdfs:label "voertuigen beschikbaar"@be-nl;
+                        rdfs:comment "Het aantal voertuigen dat beschikbaar is in een parkeer station."@be-nl ;
+                        rdfs:domain mob:Beschikbaarheid ;
+                        rdfs:range xsd:integer ;
+                        dct:created "2020-10-12"^^xsd:date ;
+                        dct:modified "2020-10-12"^^xsd:date ;
+                        vs:term_status "unstable"@en .
+
+:voertuigenOnbruikbaar a rdf:Property ;
+                       rdfs:label "voertuigen onbruikbaar"@be-nl ;
+                       rdfs:comment "Het aantal onbruikbare voertuigen in een parkeer station."@be-nl ;
+                       rdfs:domain mob:Beschikbaarheid ;
+                       rdfs:range xsd:integer ;
+                       dct:created "2020-10-12"^^xsd:date ;
+                       dct:modified "2020-10-12"^^xsd:date ;
+                       vs:term_status "unstable"@en .                      
+
+:totaalPlaatsen a rdf:Property ;
+                rdfs:label "totaal aantal plaatsen"@be-nl ;
+                rdfs:comment "Het totaal aantal parkeerplaatsen in een object. 
+                Niet vereist wanneer er een ongelimiteerde parkeer capaciteit is."@be-nl ;
+                rdsf:domein mob:Beschikbaarheid ;
+                rdfs:range xsd:Number ;
+                dct:created "2020-10-12"^^xsd:date ;
+                dct:modified "2020-10-12"^^xsd:date ;
+                vs:term_status "unstable"@en .
+
+:plaatsenOnbruikbaar a rdf:Property ;
+                     rdfs:label "aantal onbruikbare plaatsen"@be-nl ;
+                     rdfs:comment "Het aantal parkeerplaatsen die vrij maar niet bruikbaar zijn in een parkeer station."@be-nl ;
+                     rdsf:domein mob:Beschikbaarheid ;
+                     rdfs:range xsd:Number ;
+                     dct:created "2020-10-12"^^xsd:date ;
+                     dct:modified "2020-10-12"^^xsd:date ;
+                     vs:term_status "unstable"@en .
