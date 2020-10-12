@@ -8,6 +8,7 @@
 @prefix schema: <http://schema.org/> .
 @prefix adr:  <https://data.vlaanderen.be/ns/adres#> .
 @prefix ext:   <https://stijnbrysbaert.github.io/OSLO-extension/vocabulary.ttl#> .
+@prefix m8g:   <http://data.europa.eu/m8g/> .
 
 :parking_facility_1   a  mv:ParkingFacility, 
                          tn:Transportobject, 
@@ -19,37 +20,22 @@
                     ext:adres <https://data.vlaanderen.be/doc/adres/3706808> ;
                     mv:entrance :entrance ;
                     mv:exit :exit ;
-                    mv:validForVehicle mv:Bicycle ;
-                    mv:capacity :capacity ;
-                    oslo:Transportobject.beschikbaarheid :availablity ;
-                    oslo:hasStatus :status .
+                    oslo:Transportobject.beschikbaarheid :beschikbaarheid .
 
-:status   a oslo:ParkingStatus ;
-          oslo:isRenting true ;
-          oslo:isReturning true ;
-          prov:generatedAtTime "2020-10-06T11:25:00Z" .
-
-:capacity a mv:Capacity ;
-          mv:totalCapacity 20 ;
-          mv:currentValue 10 ;
-          oslo:spacesFree 9 ;
-          oslo:vehiclesAvailable 10 ;
-          oslo:vehiclesReserved 0 ;
-          oslo:vehiclesDisabled 0 ;
-          oslo:spacesDisabled 1 ;
-          prov:generatedAtTime "2020-10-06T11:25:00Z" .
-
-:bike_01  a oslo:Resource ;
-          oslo:vervoermiddel mv:Bicycle ;
-          oslo:location :parking_facility_1 ;
-          oslo:Resource.status :vehicle_status_01 .
-
-:vehicle_status_01  a oslo:VehicleStatus ;
-                    oslo:isReserved false ;
-                    oslo:isDisabled false ;
+:beschikbaarheid    a oslo:Beschikbaarheid ;
+                    ext:geplaatst true^^xsd:boolean ;
+                    ext:actief true^^xsd:boolean ;
+                    ext:ontvangt true^^xsd:boolean ;
+                    ext:totaalPlaatsen 20 ;
+                    ext:plaatsenOnbruikbaar 2 ;
+                    ext:voertuigenBeschikbaar 10 ;
+                    ext:voertuigenOnbruikbaar 1 ;
+                    oslo:periode :periode ;
                     prov:generatedAtTime "2020-10-06T11:25:00Z" .
-
-:availablity   a oslo:Beschikbaarheid .
+               
+:periode  a oslo:Periode ;
+          m8g:startTime "00:01"^^xsd:dateTime ;
+          m8g:endTime "00:00"^^xsd:dateTime .
 
 :entrance a mv:ParkingFacilityExit, adr:AdresseerbaarObject ;
           ext:adres <https://data.vlaanderen.be/doc/adres/3706808> ;
