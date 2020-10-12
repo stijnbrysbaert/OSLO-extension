@@ -1,16 +1,16 @@
 {
   "@context": {
-    "Dock": "https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Dock",
-    "Dock.aanbieder": {
+    "Station": "https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Station",
+    "Station.aanbieder": {
       "@container": "@set",
-      "@id": "https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Dock.aanbieder",
+      "@id": "https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Station.aanbieder",
       "@type": "@id"
     },
-    "Dock.location": {
+    "Station.location": {
       "@id": "http://www.w3.org/ns/locn#geometry",
       "@type" : "@id"
     },
-    "Dock.capacity": {
+    "Station.capacity": {
       "@container": "@set",
       "@id": "https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#Capacity",
       "@type": "@id"
