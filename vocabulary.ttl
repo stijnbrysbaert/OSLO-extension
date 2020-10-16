@@ -39,7 +39,7 @@
            rdfs:domain mob:Beschikbaarheid ;
            rdfs:range xsd:boolean ;
            rdfs:commment "Laat het station het terugbrengen van voertuigen toe?"@be-nl ;
-           rdsf:label "ontvangt"@be-nl ;
+           rdfs:label "ontvangt"@be-nl ;
            dct:created "2020-10-12"^^xsd:date ;
            dct:modified "2020-10-12"^^xsd:date ;
            vs:term_status "unstable"@en .
@@ -64,9 +64,8 @@
 
 :totaalPlaatsen a rdf:Property ;
                 rdfs:label "totaal aantal plaatsen"@be-nl ;
-                rdfs:comment "Het totaal aantal parkeerplaatsen in een object. 
-                Niet vereist wanneer er een ongelimiteerde parkeer capaciteit is."@be-nl ;
-                rdsf:domein mob:Beschikbaarheid ;
+                rdfs:comment "Het totaal aantal parkeerplaatsen in een object. Niet vereist wanneer er een ongelimiteerde parkeer capaciteit is."@be-nl ;
+                rdfs:domein mob:Beschikbaarheid ;
                 rdfs:range xsd:Number ;
                 dct:created "2020-10-12"^^xsd:date ;
                 dct:modified "2020-10-12"^^xsd:date ;
@@ -75,7 +74,7 @@
 :plaatsenOnbruikbaar a rdf:Property ;
                      rdfs:label "aantal onbruikbare plaatsen"@be-nl ;
                      rdfs:comment "Het aantal parkeerplaatsen die vrij maar niet bruikbaar zijn in een parkeer station."@be-nl ;
-                     rdsf:domein mob:Beschikbaarheid ;
+                     rdfs:domein mob:Beschikbaarheid ;
                      rdfs:range xsd:Number ;
                      dct:created "2020-10-12"^^xsd:date ;
                      dct:modified "2020-10-12"^^xsd:date ;
