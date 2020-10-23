@@ -1,0 +1,25 @@
+@prefix :       <https://stijnbrysbaert.github.io/OSLO-extension/mobiliteitsdiensten.ttl#> .
+@prefix dct:    <http://purl.org/dc/terms/> .
+@prefix mob:    <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#> .
+@prefix rdf:    <https://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg:    <http://www.w3.org/ns/regorg#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+
+:blue_bike  a mob:Mobiliteitsdienst ;
+            rdfs:label "Blue Bike" ;
+            mob:aanbieder :blue_bike_aanbieder ;
+            dct:title "NMBS" ;
+            dct:type :blue_bike_type ;
+            mob:uitgevoerdDoor :uitvoerder . 
+
+:blue_bike_aanbieder    a mob:Aanbieder ;
+                        rdfs:label "NMBS" ;
+                        skos:prefLabel "NMBS" ;
+                        reg:registration :id .
+
+:id a mob:Identificator .
+                        
+:blue_bike_type a mob:Dienstverleningtype .
+
+:blue_bike_uitvoerder   a mob:Uitvoerder .
