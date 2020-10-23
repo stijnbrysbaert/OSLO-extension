@@ -62,6 +62,15 @@
                        dct:modified "2020-10-12"^^xsd:date ;
                        vs:term_status "unstable"@en .                      
 
+:mobiliteitsdienst      a rdf:Property ;
+                        rdfs:label "mobiliteitsdienst" ;
+                        rdfs:comment "Mobiliteitsdienst welke dit transportobject invult."@be-nl ;
+                        rdfs:domain mob:Transportobject ;
+                        rdfs:range mob:Mobiliteitsdienst ;
+                        dct:created "2020-10-12"^^xsd:date ;
+                        dct:modified "2020-10-12"^^xsd:date ;
+                        vs:term_status "unstable"@en .
+
 :totaalPlaatsen a rdf:Property ;
                 rdfs:label "totaal aantal plaatsen"@be-nl ;
                 rdfs:comment "Het totaal aantal parkeerplaatsen in een object. Niet vereist wanneer er een ongelimiteerde parkeer capaciteit is."@be-nl ;
@@ -69,6 +78,15 @@
                 rdfs:range xsd:Number ;
                 dct:created "2020-10-12"^^xsd:date ;
                 dct:modified "2020-10-12"^^xsd:date ;
+                vs:term_status "unstable"@en .
+
+:plaatsenVrij   a rdf:Property ;                
+                rdfs:label "aantal vrije plaatsen"@be-nl ;
+                rdfs:comment "Het aantal plaatsen die vrij zijn om een voertuig in te plaatsen."@be-nl ;
+                rdfs:domein mob:Beschikbaarheid ;
+                rdfs:range xsd:Number ;
+                dct:created "2020-10-18"^^xsd:date ;
+                dct:modified "2020-10-18"^^xsd:date ;
                 vs:term_status "unstable"@en .
 
 :plaatsenOnbruikbaar a rdf:Property ;
