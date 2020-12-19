@@ -14,11 +14,11 @@
 
 :Station a owl:Class ;
          rdfs:label "station"@nl ;
-         rdsf:comment "Station waar voertuigen kunnen worden geplaatst."@nl ;
+         rdfs:comment "Station waar voertuigen kunnen worden geplaatst."@nl ;
          dct:created "2020-12-19"^^xsd:date ;
          dct:modified "2020-12-19"^^xsd:date ;
          vs:term_status "unstable"@en ;
-         rdfs:subClassOf tn:Transportobject, dc:Location .
+         rdfs:subClassOf tn:Transportobject, dct:Location .
 
 :geplaatst a rdf:Property ;
            rdfs:domain mob:Beschikbaarheid ;
@@ -51,7 +51,7 @@
                         rdfs:label "voertuigTypesBeschikbaar"@be-nl;
                         rdfs:comment "Beschikbaarheid van een bepaalt type voertuig."@be-nl ;
                         rdfs:domain mob:Beschikbaarheid ;
-                        rdfs:range ext:VoertuigenBeschikbaar ;
+                        rdfs:range :VoertuigenBeschikbaar ;
                         dct:created "2020-12-18"^^xsd:date ;
                         dct:modified "2020-12-18"^^xsd:date ;
                         vs:term_status "unstable"@en .
@@ -60,7 +60,7 @@
                         rdfs:label "voertuigTypesDocks"@be-nl;
                         rdfs:comment "Beschikbaarheid van het aantal plaatsen specifiek voor een bepaalt type voertuig."@be-nl ;
                         rdfs:domain mob:Beschikbaarheid ;
-                        rdfs:range ext:VoertuigenDocks ;
+                        rdfs:range :VoertuigenDocks ;
                         dct:created "2020-12-18"^^xsd:date ;
                         dct:modified "2020-12-18"^^xsd:date ;
                         vs:term_status "unstable"@en .
@@ -83,7 +83,7 @@
         rdfs:label "aantal"@be-nl ;
         rdfs:comment "Aantal voertuigen van een bepaalt type."@be-nl ;
         rdfs:range xsd:integer ;
-        rdfs:domain ext:VoertuigenDocks, ext:voertuigenBeschikbaar ;
+        rdfs:domain :VoertuigenDocks, :voertuigenBeschikbaar ;
         dct:created "2020-12-18"^^xsd:date ;
         dct:modified "2020-12-18"^^xsd:date ;
         vs:term_status "unstable"@en .
