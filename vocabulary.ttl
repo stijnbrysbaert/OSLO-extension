@@ -8,19 +8,22 @@
 @prefix rdf:    <https://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <http://schema.org/> .
+@prefix tn:    <https://data.vlaanderen.be/ns/transportnetwerk#> .
 @prefix vs:     <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
 @prefix xsd:    <https://www.w3.org/2001/XMLSchema#> .
 
-:adres  a rdf:Property ;
-        rdfs:seeAlso schema:address ;
-        rdfs:domain adr:AdresseebaarObject ;
-        rdfs:range adr:Adres ;
-        rdfs:isDefinedBy <https://stijnbrysbaert.github.io/OSLO-extension/vocabulary.ttl#> .
+:Station a owl:Class ;
+         rdfs:label "station"@nl ;
+         rdsf:comment "Station waar voertuigen kunnen worden geplaatst."@nl ;
+         dct:created "2020-12-19"^^xsd:date ;
+         dct:modified "2020-12-19"^^xsd:date ;
+         vs:term_status "unstable"@en ;
+         rdfs:subClassOf tn:Transportobject, dc:Location .
 
 :geplaatst a rdf:Property ;
            rdfs:domain mob:Beschikbaarheid ;
            rdfs:range xsd:boolean ;
-           rdfs:commment "Is het object momenteel geplaatst op de straat?"@be-nl ;
+           rdfs:comment "Is het object momenteel geplaatst op de straat?"@be-nl ;
            rdfs:label "geplaatst"@be-nl ;
            dct:created "2020-10-12"^^xsd:date ;
            dct:modified "2020-10-12"^^xsd:date ;
@@ -29,7 +32,7 @@
 :actief    a rdf:Property ;
            rdfs:domain mob:Beschikbaarheid ;
            rdfs:range xsd:boolean ;
-           rdfs:commment "Verhuurd het object momenteel voertuigen?"@be-nl ;
+           rdfs:comment "Verhuurd het object momenteel voertuigen?"@be-nl ;
            rdfs:label "actief"@be-nl ;
            dct:created "2020-10-12"^^xsd:date ;
            dct:modified "2020-10-12"^^xsd:date ;
@@ -38,20 +41,52 @@
 :ontvangt  a rdf:Property ;
            rdfs:domain mob:Beschikbaarheid ;
            rdfs:range xsd:boolean ;
-           rdfs:commment "Laat het station het terugbrengen van voertuigen toe?"@be-nl ;
+           rdfs:comment "Laat het station het terugbrengen van voertuigen toe?"@be-nl ;
            rdfs:label "ontvangt"@be-nl ;
            dct:created "2020-10-12"^^xsd:date ;
            dct:modified "2020-10-12"^^xsd:date ;
            vs:term_status "unstable"@en .
 
-:voertuigenBeschikbaar  a rdf:Property ;
-                        rdfs:label "voertuigen beschikbaar"@be-nl;
-                        rdfs:comment "Het aantal voertuigen dat beschikbaar is in een parkeer station."@be-nl ;
+:voertuigTypesBeschikbaar a rdf:Property ;
+                        rdfs:label "voertuigTypesBeschikbaar"@be-nl;
+                        rdfs:comment "Beschikbaarheid van een bepaalt type voertuig."@be-nl ;
                         rdfs:domain mob:Beschikbaarheid ;
-                        rdfs:range xsd:integer ;
-                        dct:created "2020-10-12"^^xsd:date ;
-                        dct:modified "2020-10-12"^^xsd:date ;
+                        rdfs:range ext:VoertuigenBeschikbaar ;
+                        dct:created "2020-12-18"^^xsd:date ;
+                        dct:modified "2020-12-18"^^xsd:date ;
                         vs:term_status "unstable"@en .
+
+:voertuigTypesDocks a rdf:Property ;
+                        rdfs:label "voertuigTypesDocks"@be-nl;
+                        rdfs:comment "Beschikbaarheid van het aantal plaatsen specifiek voor een bepaalt type voertuig."@be-nl ;
+                        rdfs:domain mob:Beschikbaarheid ;
+                        rdfs:range ext:VoertuigenDocks ;
+                        dct:created "2020-12-18"^^xsd:date ;
+                        dct:modified "2020-12-18"^^xsd:date ;
+                        vs:term_status "unstable"@en .
+
+:VoertuigenBeschikbaar  a owl:Class ;
+                        rdfs:label "VoertuigenBeschikbaar"@be-nl;
+                        rdfs:comment "Het aantal voertuigen dat beschikbaar is."@be-nl ;
+                        dct:created "2020-10-12"^^xsd:date ;
+                        dct:modified "2020-12-18"^^xsd:date ;
+                        vs:term_status "unstable"@en .
+
+:VoertuigenDocks        a owl:Class ;
+                        rdfs:label "VoertuigenDocks"@be-nl;
+                        rdfs:comment "Het aantal docks die beschikbaar zijn."@be-nl ;
+                        dct:created "2020-10-12"^^xsd:date ;
+                        dct:modified "2020-12-18"^^xsd:date ;
+                        vs:term_status "unstable"@en .
+
+:aantal a rdf:Property ;
+        rdfs:label "aantal"@be-nl ;
+        rdfs:comment "Aantal voertuigen van een bepaalt type."@be-nl ;
+        rdfs:range xsd:integer ;
+        rdfs:domain ext:VoertuigenDocks, ext:voertuigenBeschikbaar ;
+        dct:created "2020-12-18"^^xsd:date ;
+        dct:modified "2020-12-18"^^xsd:date ;
+        vs:term_status "unstable"@en .
 
 :voertuigenOnbruikbaar a rdf:Property ;
                        rdfs:label "voertuigen onbruikbaar"@be-nl ;
@@ -74,7 +109,7 @@
 :totaalPlaatsen a rdf:Property ;
                 rdfs:label "totaal aantal plaatsen"@be-nl ;
                 rdfs:comment "Het totaal aantal parkeerplaatsen in een object. Niet vereist wanneer er een ongelimiteerde parkeer capaciteit is."@be-nl ;
-                rdfs:domein mob:Beschikbaarheid ;
+                rdfs:domain mob:Beschikbaarheid ;
                 rdfs:range xsd:Number ;
                 dct:created "2020-10-12"^^xsd:date ;
                 dct:modified "2020-10-12"^^xsd:date ;
@@ -83,7 +118,7 @@
 :plaatsenVrij   a rdf:Property ;                
                 rdfs:label "aantal vrije plaatsen"@be-nl ;
                 rdfs:comment "Het aantal plaatsen die vrij zijn om een voertuig in te plaatsen."@be-nl ;
-                rdfs:domein mob:Beschikbaarheid ;
+                rdfs:domain mob:Beschikbaarheid ;
                 rdfs:range xsd:Number ;
                 dct:created "2020-10-18"^^xsd:date ;
                 dct:modified "2020-10-18"^^xsd:date ;
@@ -92,7 +127,7 @@
 :plaatsenOnbruikbaar a rdf:Property ;
                      rdfs:label "aantal onbruikbare plaatsen"@be-nl ;
                      rdfs:comment "Het aantal parkeerplaatsen die vrij maar niet bruikbaar zijn in een parkeer station."@be-nl ;
-                     rdfs:domein mob:Beschikbaarheid ;
+                     rdfs:domain mob:Beschikbaarheid ;
                      rdfs:range xsd:Number ;
                      dct:created "2020-10-12"^^xsd:date ;
                      dct:modified "2020-10-12"^^xsd:date ;
