@@ -14,11 +14,54 @@
 
 :Station a owl:Class ;
          rdfs:label "station"@nl ;
-         rdfs:comment "Station waar voertuigen kunnen worden geplaatst."@nl ;
+         rdfs:comment "Station waar voertuigen kunnen worden geplaatst en gebruikt."@nl ;
          dct:created "2020-12-19"^^xsd:date ;
          dct:modified "2020-12-19"^^xsd:date ;
          vs:term_status "unstable"@en ;
-         rdfs:subClassOf tn:Transportobject, dct:Location .
+         rdfs:subClassOf tn:Transportpunt, dct:Location .
+
+:voertuigTypesBeschikbaar a owl:ObjectProperty ;
+                        rdfs:label "voertuigTypesBeschikbaar"@be-nl;
+                        rdfs:comment "Beschikbaarheid van een bepaalt type voertuig."@be-nl ;
+                        rdfs:domain mob:Beschikbaarheid ;
+                        rdfs:range :VoertuigenBeschikbaar ;
+                        dct:created "2020-12-18"^^xsd:date ;
+                        dct:modified "2020-12-18"^^xsd:date ;
+                        vs:term_status "unstable"@en .
+
+:voertuigDocksBeschikbaar a owl:ObjectProperty ;
+                        rdfs:label "voertuigTypesDocks"@be-nl;
+                        rdfs:comment "Beschikbaarheid van het aantal plaatsen specifiek voor een bepaalt type voertuig."@be-nl ;
+                        rdfs:domain mob:Beschikbaarheid ;
+                        rdfs:range :DocksBeschikbaar ;
+                        dct:created "2020-12-18"^^xsd:date ;
+                        dct:modified "2020-12-18"^^xsd:date ;
+                        vs:term_status "unstable"@en .
+
+:VoertuigenBeschikbaar  a owl:Class ;
+                        rdfs:label "VoertuigenBeschikbaar"@be-nl;
+                        rdfs:comment "Het aantal voertuigen van een bepaalt type dat beschikbaar is."@be-nl ;
+                        dct:created "2020-10-12"^^xsd:date ;
+                        dct:modified "2020-12-18"^^xsd:date ;
+                        vs:term_status "unstable"@en .
+
+:DocksBeschikbaar       a owl:Class ;
+                        rdfs:label "VoertuigenDocks"@be-nl;
+                        rdfs:comment "Het aantal docks die beschikbaar zijn."@be-nl ;
+                        dct:created "2020-10-12"^^xsd:date ;
+                        dct:modified "2020-12-18"^^xsd:date ;
+                        vs:term_status "unstable"@en .
+
+:aantal a owl:ObjectProperty ;
+        rdfs:label "aantal"@be-nl ;
+        rdfs:comment "Aantal items van een instantie."@be-nl ;
+        rdfs:range xsd:integer ;
+        rdfs:domain :VoertuigenDocks, :voertuigenBeschikbaar ;
+        dct:created "2020-12-18"^^xsd:date ;
+        dct:modified "2020-12-18"^^xsd:date ;
+        vs:term_status "unstable"@en .
+
+#hieronder zijn extra termen die niet in de scriptie werden opgenomen
 
 :geplaatst a owl:ObjectProperty ;
            rdfs:domain mob:Beschikbaarheid ;
@@ -46,47 +89,6 @@
            dct:created "2020-10-12"^^xsd:date ;
            dct:modified "2020-10-12"^^xsd:date ;
            vs:term_status "unstable"@en .
-
-:voertuigTypesBeschikbaar a owl:ObjectProperty ;
-                        rdfs:label "voertuigTypesBeschikbaar"@be-nl;
-                        rdfs:comment "Beschikbaarheid van een bepaalt type voertuig."@be-nl ;
-                        rdfs:domain mob:Beschikbaarheid ;
-                        rdfs:range :VoertuigenBeschikbaar ;
-                        dct:created "2020-12-18"^^xsd:date ;
-                        dct:modified "2020-12-18"^^xsd:date ;
-                        vs:term_status "unstable"@en .
-
-:voertuigTypesDocks a owl:ObjectProperty ;
-                        rdfs:label "voertuigTypesDocks"@be-nl;
-                        rdfs:comment "Beschikbaarheid van het aantal plaatsen specifiek voor een bepaalt type voertuig."@be-nl ;
-                        rdfs:domain mob:Beschikbaarheid ;
-                        rdfs:range :VoertuigenDocks ;
-                        dct:created "2020-12-18"^^xsd:date ;
-                        dct:modified "2020-12-18"^^xsd:date ;
-                        vs:term_status "unstable"@en .
-
-:VoertuigenBeschikbaar  a owl:Class ;
-                        rdfs:label "VoertuigenBeschikbaar"@be-nl;
-                        rdfs:comment "Het aantal voertuigen dat beschikbaar is."@be-nl ;
-                        dct:created "2020-10-12"^^xsd:date ;
-                        dct:modified "2020-12-18"^^xsd:date ;
-                        vs:term_status "unstable"@en .
-
-:VoertuigenDocks        a owl:Class ;
-                        rdfs:label "VoertuigenDocks"@be-nl;
-                        rdfs:comment "Het aantal docks die beschikbaar zijn."@be-nl ;
-                        dct:created "2020-10-12"^^xsd:date ;
-                        dct:modified "2020-12-18"^^xsd:date ;
-                        vs:term_status "unstable"@en .
-
-:aantal a owl:ObjectProperty ;
-        rdfs:label "aantal"@be-nl ;
-        rdfs:comment "Aantal voertuigen van een bepaalt type."@be-nl ;
-        rdfs:range xsd:integer ;
-        rdfs:domain :VoertuigenDocks, :voertuigenBeschikbaar ;
-        dct:created "2020-12-18"^^xsd:date ;
-        dct:modified "2020-12-18"^^xsd:date ;
-        vs:term_status "unstable"@en .
 
 :voertuigenOnbruikbaar a owl:ObjectProperty ;
                        rdfs:label "voertuigen onbruikbaar"@be-nl ;
