@@ -1,7 +1,7 @@
 {
   "@context":[
         {"ext": "https://stijnbrysbaert.github.io/OSLO-extension/vocabulary.ttl#"},
-        {"recordid": {"@id": "http://example.com#"}},
+        {"recordid": {"@id": "http://www.example.org/rdf#"}},
         {"num_bikes_available": {"@id": "ext:aantal", "@type":"http://www.w3.org/2001/XMLSchema#integer"}},
    ],
   "donkeys": [
