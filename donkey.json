@@ -1,0 +1,38 @@
+{
+  "@context":[
+        {"ext": "https://stijnbrysbaert.github.io/OSLO-extension/vocabulary.ttl#"},
+        {"availableBikeNumber": {"@id": "ext:aantal", "@type":"http://www.w3.org/2001/XMLSchema#integer"}},
+        {"BikeHireDockingStation": {"@id": "ext:Station"}},
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+   ],
+  "donkeys": [
+    {
+        "datasetid": "donkey-republic-beschikbaarheid-deelfietsen-per-station",
+        "recordid": "62d9aa911167ba3f491f93f7ce7adfb530925c8f",
+        "fields": {
+            "last_reported": "1600650631",
+            "num_docks_available": 2,
+            "is_renting": 1,
+            "station_id": "12419",
+            "is_installed": 1,
+            "num_bikes_available": 1,
+            "is_returning": 1
+        },
+        "record_timestamp": "2020-12-21T19:30:03.126+01:00"
+    },
+    {
+        "datasetid": "donkey-republic-beschikbaarheid-deelfietsen-per-station",
+        "recordid": "fbbd057f9b0f507a7bd9b6200c3a71e2a12bbc97",
+        "fields": {
+            "last_reported": "1607735889",
+            "num_docks_available": 0,
+            "is_renting": 1,
+            "station_id": "16619",
+            "is_installed": 1,
+            "num_bikes_available": 3,
+            "is_returning": 1
+        },
+        "record_timestamp": "2020-12-21T19:30:03.126+01:00"
+    }
+ ]
+}
