@@ -1,0 +1,10 @@
+{
+    "@context":{
+        {"ext": "https://stijnbrysbaert.github.io/OSLO-extension/vocabulary.ttl#"},
+        {"availableBikeNumber": {"@id": "ext:aantal", "@type":"http://www.w3.org/2001/XMLSchema#integer"}},
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+    },
+    "id": "malaga-bici-7",
+    "type": "BikeHireDockingStation",
+    "availableBikeNumber": 18,
+}
