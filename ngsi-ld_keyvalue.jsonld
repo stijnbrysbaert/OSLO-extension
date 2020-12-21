@@ -1,13 +1,11 @@
 {
     "@context":[
         {"ext": "https://stijnbrysbaert.github.io/OSLO-extension/vocabulary.ttl#"},
-        {"type": {"@id": "@type"}},
-        {"id": {"@id": "@id"}},
         {"availableBikeNumber": {"@id": "ext:aantal", "@type":"http://www.w3.org/2001/XMLSchema#integer"}},
         {"BikeHireDockingStation": {"@id": "ext:Station"}},
         "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
     ],
-    "id": "malaga-bici-7",
-    "type": "BikeHireDockingStation",
+    "@id": "malaga-bici-7",
+    "@type": "BikeHireDockingStation",
     "availableBikeNumber": 18,
 }
