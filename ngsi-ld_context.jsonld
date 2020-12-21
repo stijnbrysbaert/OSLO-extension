@@ -1,0 +1,15 @@
+{
+    "id": "urn:ngsi-ld:BikeHireDockingStation:Bcn-BikeHireDockingStation-1",
+    "type": "BikeHireDockingStation",
+    "availableBikeNumber": {
+        "type": "Property",
+        "value": 20,
+        "observedAt": "2018-09-25T12:00:00Z"
+    },
+    "@context":[
+        {"ext": "https://stijnbrysbaert.github.io/OSLO-extension/vocabulary.ttl#"},
+        {"availableBikeNumber": {"@id": "ext:aantal", "@type":"http://www.w3.org/2001/XMLSchema#integer"}},
+        "https://schema.lab.fiware.org/ld/context",
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+    ]
+}
