@@ -4,7 +4,8 @@
         {"recordid": {"@id": "http://www.example.org/rdf#"}},
         {"num_bikes_available": {"@id": "ext:aantal", "@type":"http://www.w3.org/2001/XMLSchema#integer"}},
    ],
-  "donkeys": [
+  "type": "FeatureCollection",
+  "features": [
     {
         "datasetid": "donkey-republic-beschikbaarheid-deelfietsen-per-station",
         "recordid": "62d9aa911167ba3f491f93f7ce7adfb530925c8f",
