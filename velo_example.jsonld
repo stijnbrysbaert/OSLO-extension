@@ -1,0 +1,74 @@
+{
+  "@context":[
+        {"ext": "https://stijnbrysbaert.github.io/OSLO-extension/vocabulary.ttl#"},
+        {"availableBikeNumber": {"@id": "ext:aantal", "@type":"http://www.w3.org/2001/XMLSchema#integer"}},
+        {"BikeHireDockingStation": {"@id": "ext:Station"}},
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+    ],
+  "type": "FeatureCollection",
+  "features": [
+    {
+        "id": "BikeHireDockingStation:Antwerpen:035",
+        "type": "BikeHireDockingStation",
+        "address": {
+            "type": "PostalAddress",
+            "value": {
+                "addressCountry": "BE",
+                "postalCode": "2000",
+                "streetAddress": "cockerillkaai"
+            },
+            "metadata": {}
+        },
+        "areaServed": {
+            "type": "Text",
+            "value": "Antwerpen",
+            "metadata": {}
+        },
+        "availableBikeNumber": {
+            "type": "Number",
+            "value": 23,
+            "metadata": {
+                "timestamp": {
+                    "type": "DateTime",
+                    "value": "2020-12-21T20:21:14.00Z"
+                }
+            }
+        },
+        "freeSlotNumber": {
+            "type": "Number",
+            "value": 13,
+            "metadata": {
+                "timestamp": {
+                    "type": "DateTime",
+                    "value": "2020-12-21T20:21:14.00Z"
+                }
+            }
+        },
+        "location": {
+            "type": "geo:json",
+            "value": {
+                "type": "Point",
+                "coordinates": [
+                    4.3877,
+                    51.210318
+                ]
+            },
+            "metadata": {}
+        },
+        "name": {
+            "type": "Text",
+            "value": "035- Cockerillkaai",
+            "metadata": {}
+        },
+        "status": {
+            "type": "Text",
+            "value": "working",
+            "metadata": {
+                "timestamp": {
+                    "type": "DateTime",
+                    "value": "2020-12-21T20:21:14.00Z"
+                }
+            }
+        }
+    }
+]
