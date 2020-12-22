@@ -3,7 +3,6 @@
         {"ext": "https://stijnbrysbaert.github.io/OSLO-extension/vocabulary.ttl#"},
         {"availableBikeNumber": {"@id": "ext:aantal", "@type":"http://www.w3.org/2001/XMLSchema#integer"}},
         {"BikeHireDockingStation": {"@id": "ext:Station"}},
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
     ],
   "type": "FeatureCollection",
   "features": [
@@ -71,5 +70,5 @@
             }
         }
     }
-]
+  ]
 }
