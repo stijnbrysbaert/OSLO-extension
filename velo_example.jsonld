@@ -4,7 +4,7 @@
       "ext": "https://stijnbrysbaert.github.io/OSLO-extension/vocabulary.ttl#"
     },
     {
-      "example": "http://example.org/rdf#"
+      "example": "http://www.example.org/rdf#"
     },
     {
       "availableBikeNumber": {
