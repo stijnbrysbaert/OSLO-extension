@@ -1,11 +1,8 @@
 {
   "@context":[
-        {"ext": "https://stijnbrysbaert.github.io/OSLO-extension/vocabulary.ttl#"},
-        {"recordid": {"@id": "http://www.example.org/rdf#"}},
-        {"num_bikes_available": {"@id": "ext:aantal", "@type":"http://www.w3.org/2001/XMLSchema#integer"}}
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
    ],
-  "type": "FeatureCollection",
-  "features": [
+  "@graph": [
     {
         "datasetid": "donkey-republic-beschikbaarheid-deelfietsen-per-station",
         "recordid": "62d9aa911167ba3f491f93f7ce7adfb530925c8f",
