@@ -1,7 +1,7 @@
 {
-  "@context":[
+  "@context":{
     "@vocab": "http://example.org/rdf#"
-   ],
+  },
   "@included": [
     {
         "datasetid": "donkey-republic-beschikbaarheid-deelfietsen-per-station",
