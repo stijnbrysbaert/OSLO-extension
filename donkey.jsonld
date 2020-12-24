@@ -2,7 +2,7 @@
   "@context":[
     "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
    ],
-  "@graph": [
+  "@included": [
     {
         "datasetid": "donkey-republic-beschikbaarheid-deelfietsen-per-station",
         "recordid": "62d9aa911167ba3f491f93f7ce7adfb530925c8f",
