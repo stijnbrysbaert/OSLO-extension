@@ -61,7 +61,7 @@
         dct:modified "2020-12-18"^^xsd:date ;
         vs:term_status "unstable"@en .
 
-#hieronder zijn extra termen die niet in de scriptie werden opgenomen
+#De termen hieronder gedefinieerd zijn extra termen die niet in de scriptie werden opgenomen.
 
 :geplaatst a owl:ObjectProperty ;
            rdfs:domain mob:Beschikbaarheid ;
@@ -88,16 +88,7 @@
            rdfs:label "ontvangt"@be-nl ;
            dct:created "2020-10-12"^^xsd:date ;
            dct:modified "2020-10-12"^^xsd:date ;
-           vs:term_status "unstable"@en .
-
-:voertuigenOnbruikbaar a owl:ObjectProperty ;
-                       rdfs:label "voertuigen onbruikbaar"@be-nl ;
-                       rdfs:comment "Het aantal onbruikbare voertuigen in een parkeer station."@be-nl ;
-                       rdfs:domain mob:Beschikbaarheid ;
-                       rdfs:range xsd:integer ;
-                       dct:created "2020-10-12"^^xsd:date ;
-                       dct:modified "2020-10-12"^^xsd:date ;
-                       vs:term_status "unstable"@en .                      
+           vs:term_status "unstable"@en .                 
 
 :mobiliteitsdienst      a owl:ObjectProperty ;
                         rdfs:label "mobiliteitsdienst" ;
@@ -107,30 +98,3 @@
                         dct:created "2020-10-12"^^xsd:date ;
                         dct:modified "2020-10-12"^^xsd:date ;
                         vs:term_status "unstable"@en .
-
-:totaalPlaatsen a owl:ObjectProperty ;
-                rdfs:label "totaal aantal plaatsen"@be-nl ;
-                rdfs:comment "Het totaal aantal parkeerplaatsen in een object. Niet vereist wanneer er een ongelimiteerde parkeer capaciteit is."@be-nl ;
-                rdfs:domain mob:Beschikbaarheid ;
-                rdfs:range xsd:Number ;
-                dct:created "2020-10-12"^^xsd:date ;
-                dct:modified "2020-10-12"^^xsd:date ;
-                vs:term_status "unstable"@en .
-
-:plaatsenVrij   a owl:ObjectProperty ;                
-                rdfs:label "aantal vrije plaatsen"@be-nl ;
-                rdfs:comment "Het aantal plaatsen die vrij zijn om een voertuig in te plaatsen."@be-nl ;
-                rdfs:domain mob:Beschikbaarheid ;
-                rdfs:range xsd:Number ;
-                dct:created "2020-10-18"^^xsd:date ;
-                dct:modified "2020-10-18"^^xsd:date ;
-                vs:term_status "unstable"@en .
-
-:plaatsenOnbruikbaar a owl:ObjectProperty ;
-                     rdfs:label "aantal onbruikbare plaatsen"@be-nl ;
-                     rdfs:comment "Het aantal parkeerplaatsen die vrij maar niet bruikbaar zijn in een parkeer station."@be-nl ;
-                     rdfs:domain mob:Beschikbaarheid ;
-                     rdfs:range xsd:Number ;
-                     dct:created "2020-10-12"^^xsd:date ;
-                     dct:modified "2020-10-12"^^xsd:date ;
-                     vs:term_status "unstable"@en .
