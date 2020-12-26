@@ -1,4 +1,4 @@
-@prefix :       <https://stijnbrysbaert.github.io/OSLO-extension/vocabulary.ttl#> .
+@prefix ext:       <https://stijnbrysbaert.github.io/OSLO-extension/vocabulary.ttl#> .
 @prefix adr:    <https://data.vlaanderen.be/ns/adres#> .
 @prefix dct:    <http://purl.org/dc/terms/> .
 @prefix mob:    <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#> .
@@ -12,7 +12,7 @@
 @prefix vs:     <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
 @prefix xsd:    <https://www.w3.org/2001/XMLSchema#> .
 
-:Station a owl:Class ;
+ext:Station a owl:Class ;
          rdfs:label "station"@nl ;
          rdfs:comment "Station waar voertuigen kunnen worden geplaatst en gebruikt."@nl ;
          dct:created "2020-12-19"^^xsd:date ;
@@ -20,50 +20,50 @@
          vs:term_status "unstable"@en ;
          rdfs:subClassOf tn:Transportpunt, dct:Location .
 
-:voertuigTypesBeschikbaar a owl:ObjectProperty ;
+ext:voertuigTypesBeschikbaar a owl:ObjectProperty ;
                         rdfs:label "voertuigTypesBeschikbaar"@be-nl;
                         rdfs:comment "Beschikbaarheid van een bepaalt type voertuig."@be-nl ;
                         rdfs:domain mob:Beschikbaarheid ;
-                        rdfs:range :VoertuigenBeschikbaar ;
+                        rdfs:range ext:VoertuigenBeschikbaar ;
                         dct:created "2020-12-18"^^xsd:date ;
                         dct:modified "2020-12-18"^^xsd:date ;
                         vs:term_status "unstable"@en .
 
-:voertuigDocksBeschikbaar a owl:ObjectProperty ;
+ext:voertuigDocksBeschikbaar a owl:ObjectProperty ;
                         rdfs:label "voertuigTypesDocks"@be-nl;
                         rdfs:comment "Beschikbaarheid van het aantal plaatsen specifiek voor een bepaalt type voertuig."@be-nl ;
                         rdfs:domain mob:Beschikbaarheid ;
-                        rdfs:range :DocksBeschikbaar ;
+                        rdfs:range ext:DocksBeschikbaar ;
                         dct:created "2020-12-18"^^xsd:date ;
                         dct:modified "2020-12-18"^^xsd:date ;
                         vs:term_status "unstable"@en .
 
-:VoertuigenBeschikbaar  a owl:Class ;
+ext:VoertuigenBeschikbaar  a owl:Class ;
                         rdfs:label "VoertuigenBeschikbaar"@be-nl;
                         rdfs:comment "Het aantal voertuigen van een bepaalt type dat beschikbaar is."@be-nl ;
                         dct:created "2020-10-12"^^xsd:date ;
                         dct:modified "2020-12-18"^^xsd:date ;
                         vs:term_status "unstable"@en .
 
-:DocksBeschikbaar       a owl:Class ;
+ext:DocksBeschikbaar       a owl:Class ;
                         rdfs:label "VoertuigenDocks"@be-nl;
                         rdfs:comment "Het aantal docks die beschikbaar zijn."@be-nl ;
                         dct:created "2020-10-12"^^xsd:date ;
                         dct:modified "2020-12-18"^^xsd:date ;
                         vs:term_status "unstable"@en .
 
-:aantal a owl:ObjectProperty ;
+ext:aantal a owl:ObjectProperty ;
         rdfs:label "aantal"@be-nl ;
         rdfs:comment "Aantal items van een instantie."@be-nl ;
         rdfs:range xsd:integer ;
-        rdfs:domain :VoertuigenDocks, :voertuigenBeschikbaar ;
+        rdfs:domain ext:VoertuigenDocks, ext:voertuigenBeschikbaar ;
         dct:created "2020-12-18"^^xsd:date ;
         dct:modified "2020-12-18"^^xsd:date ;
         vs:term_status "unstable"@en .
 
 #De termen hieronder gedefinieerd zijn extra termen die niet in de scriptie werden opgenomen.
 
-:geplaatst a owl:ObjectProperty ;
+ext:geplaatst a owl:ObjectProperty ;
            rdfs:domain mob:Beschikbaarheid ;
            rdfs:range xsd:boolean ;
            rdfs:comment "Is het object momenteel geplaatst op de straat?"@be-nl ;
@@ -72,7 +72,7 @@
            dct:modified "2020-10-12"^^xsd:date ;
            vs:term_status "unstable"@en . 
 
-:actief    a owl:ObjectProperty ;
+ext:actief    a owl:ObjectProperty ;
            rdfs:domain mob:Beschikbaarheid ;
            rdfs:range xsd:boolean ;
            rdfs:comment "Verhuurd het object momenteel voertuigen?"@be-nl ;
@@ -81,7 +81,7 @@
            dct:modified "2020-10-12"^^xsd:date ;
            vs:term_status "unstable"@en .
 
-:ontvangt  a owl:ObjectProperty ;
+ext:ontvangt  a owl:ObjectProperty ;
            rdfs:domain mob:Beschikbaarheid ;
            rdfs:range xsd:boolean ;
            rdfs:comment "Laat het station het terugbrengen van voertuigen toe?"@be-nl ;
@@ -90,7 +90,7 @@
            dct:modified "2020-10-12"^^xsd:date ;
            vs:term_status "unstable"@en .                 
 
-:mobiliteitsdienst      a owl:ObjectProperty ;
+ext:mobiliteitsdienst      a owl:ObjectProperty ;
                         rdfs:label "mobiliteitsdienst" ;
                         rdfs:comment "Mobiliteitsdienst welke dit transportobject invult."@be-nl ;
                         rdfs:domain mob:Transportobject ;
