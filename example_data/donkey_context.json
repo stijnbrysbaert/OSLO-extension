@@ -1,3 +1,5 @@
-"@context" : {
-  "@vocab": "http://example.org/rdf#"
- }
+{ 
+  "@context" : {
+    "@vocab": "http://example.org/rdf#"
+  }
+}
