@@ -1,4 +1,4 @@
-@prefix ext:       <https://stijnbrysbaert.github.io/OSLO-extension/vocabulary.ttl#> .
+@prefix ext:    <https://stijnbrysbaert.github.io/OSLO-extension/vocabulary.ttl#> .
 @prefix adr:    <https://data.vlaanderen.be/ns/adres#> .
 @prefix dct:    <http://purl.org/dc/terms/> .
 @prefix mob:    <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#> .
@@ -11,6 +11,11 @@
 @prefix tn:    <https://data.vlaanderen.be/ns/transportnetwerk#> .
 @prefix vs:     <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
 @prefix xsd:    <https://www.w3.org/2001/XMLSchema#> .
+
+<https://stijnbrysbaert.github.io/OSLO-extension/vocabulary.ttl#> a owl:Ontology ;
+	dct:title "Voorstel uitbreiding OSLO mobiliteit: trips & aanbod" ;
+	dct:date "2020-09-30" ;
+	dct:description "Dit RDF vocabularium is een voorstel om het OSLO mobiliteit: trips & aanbod vocabularium uit te breiden zodat gegevens rond deelmobiliteit kunnen gepubliceerd worden in OSLO." .
 
 ext:Station a owl:Class ;
          rdfs:label "station"@nl ;
@@ -52,7 +57,7 @@ ext:DocksBeschikbaar       a owl:Class ;
                         dct:modified "2020-12-18"^^xsd:date ;
                         vs:term_status "unstable"@en .
 
-ext:aantal a owl:ObjectProperty ;
+ext:aantal a owl:DatatypeProperty ;
         rdfs:label "aantal"@be-nl ;
         rdfs:comment "Aantal items van een instantie."@be-nl ;
         rdfs:range xsd:integer ;
