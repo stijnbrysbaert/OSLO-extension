@@ -1,4 +1,4 @@
-{
+[
     {
         "datasetid": "donkey-republic-beschikbaarheid-deelfietsen-per-station",
         "recordid": "62d9aa911167ba3f491f93f7ce7adfb530925c8f",
@@ -8007,4 +8007,4 @@
         },
         "record_timestamp": "2020-12-21T19:30:03.126+01:00"
     }
-}
+]
