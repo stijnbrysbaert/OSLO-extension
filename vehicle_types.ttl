@@ -1,0 +1,7 @@
+@prefix types: <https://stijnbrysbaert.github.io/OSLO-extension/vehicle_types.ttl#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix trips: <https://data.vlaanderen.be/ns/mobiliteit/trips-en-aanbod#>.
+
+types:bicycle a trips:Vervoermiddel ;
+              rdfs:label "stadsfiets"@nl .
