@@ -11,7 +11,10 @@
             mob:aanbieder :blue_bike_aanbieder ;
             dct:title "NMBS" ;
             dct:type :blue_bike_type ;
-            mob:uitgevoerdDoor :uitvoerder . 
+            mob:uitgevoerdDoor :uitvoerder .
+
+:velo a mob:Mobiliteitsdienst ;
+      rdfs:label "Velo" .
 
 :blue_bike_aanbieder    a mob:Aanbieder ;
                         rdfs:label "NMBS" ;
