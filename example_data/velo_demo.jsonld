@@ -1,6 +1,8 @@
 {
   "@context":[
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+        {"ext": "https://stijnbrysbaert.github.io/OSLO-extension/vocabulary.ttl#"},
+        {"BikeHireDockingStation": {"@id": "ext:Station"}},
   ],
   "@graph": {
         "id": "BikeHireDockingStation:Antwerpen:035",
