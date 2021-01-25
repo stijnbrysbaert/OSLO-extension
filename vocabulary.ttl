@@ -27,7 +27,7 @@ ext:Station a owl:Class ;
 
 ext:voertuigTypesBeschikbaar a owl:ObjectProperty ;
                         rdfs:label "voertuigTypesBeschikbaar"@be-nl;
-                        rdfs:comment "Beschikbaarheid van een bepaalt type voertuig."@be-nl ;
+                        rdfs:comment "Beschikbaarheid van een bepaald type voertuig."@be-nl ;
                         rdfs:domain mob:Beschikbaarheid ;
                         rdfs:range ext:VoertuigenBeschikbaar ;
                         dct:created "2020-12-18"^^xsd:date ;
@@ -36,7 +36,7 @@ ext:voertuigTypesBeschikbaar a owl:ObjectProperty ;
 
 ext:voertuigDocksBeschikbaar a owl:ObjectProperty ;
                         rdfs:label "voertuigTypesDocks"@be-nl;
-                        rdfs:comment "Beschikbaarheid van het aantal plaatsen specifiek voor een bepaalt type voertuig."@be-nl ;
+                        rdfs:comment "Beschikbaarheid van het aantal plaatsen specifiek voor een bepaald type voertuig."@be-nl ;
                         rdfs:domain mob:Beschikbaarheid ;
                         rdfs:range ext:DocksBeschikbaar ;
                         dct:created "2020-12-18"^^xsd:date ;
@@ -45,7 +45,7 @@ ext:voertuigDocksBeschikbaar a owl:ObjectProperty ;
 
 ext:VoertuigenBeschikbaar  a owl:Class ;
                         rdfs:label "VoertuigenBeschikbaar"@be-nl;
-                        rdfs:comment "Het aantal voertuigen van een bepaalt type dat beschikbaar is."@be-nl ;
+                        rdfs:comment "Het aantal voertuigen van een bepaald type dat beschikbaar is."@be-nl ;
                         dct:created "2020-10-12"^^xsd:date ;
                         dct:modified "2020-12-18"^^xsd:date ;
                         vs:term_status "unstable"@en .
